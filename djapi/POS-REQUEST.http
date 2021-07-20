@@ -1,0 +1,66 @@
+GET http://127.0.0.1:8000/rest/v1/docs/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NzgxNDc0LCJqdGkiOiI0ZDZmOThjZWQxYWU0ZTA4OTg4YTQ4ZTU3NzJkMWNlYSIsInVzZXJfaWQiOjJ9.266sdo9zjNBSKgRPlJGpG5-0vfzSD4EKeSIv6vjr6s8
+
+GET http://127.0.0.1:8000/rest/v1/docs/3/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NzgwMzcyLCJqdGkiOiI4ZDc1YjQ2N2Q5OWQ0YWJiYWM2ZDJiNDAzYmJiZTZmMiIsInVzZXJfaWQiOjJ9.In7vEa-rNKLeX7PIsyPYXlMwOBY31FRWfjehSO0Agps
+
+
+
+POST http://127.0.0.1:8000/rest/v1/docs/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NTMxMjQ1LCJqdGkiOiI0Zjg5ODI2NjI2M2Y0YTAxODhhZTE2OWU4NjM4MjgxNSIsInVzZXJfaWQiOjJ9.2jO8faf9iDEIslcL9BygRBpaW_tO4418beyxEW5jHDI
+
+{
+    "nombre": "Cuarta Documento",
+    "expira": "2030-08-05",
+    "alerta1y": false,
+    "alerta6m": true,
+    "alerta3m": true,
+    "alerta1m": false
+}
+
+
+
+PUT http://127.0.0.1:8000/rest/v1/docs/1/
+Content-Type: application/json
+
+{
+    "nombre": "Primer Documento",
+    "expira": "2030-08-05",
+    "alerta1y": true,
+    "alerta6m": false,
+    "alerta3m": false,
+    "alerta1m": true
+}
+
+DELETE http://127.0.0.1:8000/rest/v1/docs/1/
+Content-Type: application/json
+
+
+POST  http://127.0.0.1:8000/rest/v1/token/
+Content-Type: application/json
+
+{
+    "username":"jorge",
+    "password":"kate1532"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+# superuser = kinudata
+# password = kinudata1532
+
+# user = jorge
+# password = kate1532
