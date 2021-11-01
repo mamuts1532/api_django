@@ -5,15 +5,36 @@ TokenObtainPairView,
 TokenRefreshView,
 )
 
-from .views import prueba, DocumentoViewSet
+from .views import (prueba, 
+                    DocumentoViewSet, 
+                    CategoriaViewSet, 
+                    SubCategoriaViewSet, 
+                    ProductoViewSet, 
+                    ProveedorViewSet,
+                    ComprasViewSet,
+                    ComprasDetViewSet,
+                    ClienteViewSet,
+                    FacturaDetViewSet,
+                    FacturasViewSet)
 
 router = routers.DefaultRouter()
 router.register(r'docs', DocumentoViewSet)
+router.register(r'categoria', CategoriaViewSet)
+router.register(r'subcategoria', SubCategoriaViewSet)
+router.register(r'producto', ProductoViewSet)
+router.register(r'proveedor', ProveedorViewSet)
+router.register(r'compras', ComprasViewSet)
+router.register(r'compras-detalle', ComprasDetViewSet)
+router.register(r'cliente', ClienteViewSet)
+router.register(r'facturas', FacturasViewSet)
+router.register(r'facturas-detalle', FacturaDetViewSet)
+
 
 urlpatterns = [
     #path('', prueba, name="prueba"),
     path('', include(router.urls)),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh', TokenRefreshView.as_view(), name='token_refresh'),
+
 
 ]

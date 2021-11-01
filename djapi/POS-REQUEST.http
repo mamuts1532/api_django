@@ -1,6 +1,6 @@
 GET http://127.0.0.1:8000/rest/v1/docs/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NzgxNDc0LCJqdGkiOiI0ZDZmOThjZWQxYWU0ZTA4OTg4YTQ4ZTU3NzJkMWNlYSIsInVzZXJfaWQiOjJ9.266sdo9zjNBSKgRPlJGpG5-0vfzSD4EKeSIv6vjr6s8
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI3OTkzMzQ1LCJqdGkiOiJmNDVmNDEzMDU5OGM0ZGMzOTA4MWFlM2IwYWEwYjI5NiIsInVzZXJfaWQiOjF9.55wF84qxBcVhXD2G6nbV8BroIBRIsCew5HXO4g4ASKU
 
 GET http://127.0.0.1:8000/rest/v1/docs/3/
 Content-Type: application/json
@@ -10,14 +10,14 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 
 POST http://127.0.0.1:8000/rest/v1/docs/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NTMxMjQ1LCJqdGkiOiI0Zjg5ODI2NjI2M2Y0YTAxODhhZTE2OWU4NjM4MjgxNSIsInVzZXJfaWQiOjJ9.2jO8faf9iDEIslcL9BygRBpaW_tO4418beyxEW5jHDI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI3OTkzMzQ1LCJqdGkiOiJmNDVmNDEzMDU5OGM0ZGMzOTA4MWFlM2IwYWEwYjI5NiIsInVzZXJfaWQiOjF9.55wF84qxBcVhXD2G6nbV8BroIBRIsCew5HXO4g4ASKU
 
 {
-    "nombre": "Cuarta Documento",
-    "expira": "2030-08-05",
+    "nombre": "Tercer Documento",
+    "expira": "2020-08-05",
     "alerta1y": false,
     "alerta6m": true,
-    "alerta3m": true,
+    "alerta3m": false,
     "alerta1m": false
 }
 
@@ -35,8 +35,24 @@ Content-Type: application/json
     "alerta1m": true
 }
 
-DELETE http://127.0.0.1:8000/rest/v1/docs/1/
+DELETE http://127.0.0.1:8000/rest/v1/docs/3/
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI3NzM5NDUyLCJqdGkiOiJkZTk3N2ZlN2E3NDk0YzgwOWI2ODYwMjBiNDc1MDAyYyIsInVzZXJfaWQiOjF9.T2Ts3fW7M2XhkzhdMy0s5qF5aR2qZH-bIBWEpXTJqgs
+
+
+POST  http://127.0.0.1:8000/rest/v1/token/
+Content-Type: application/json
+
+{
+    "username":"jorge",
+    "password":"kate1532"
+}
+
+######################################################################
+
+GET http://127.0.0.1:8000/rest/v1/categoria/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4ODYyMzYzLCJqdGkiOiI5MmUzMmJkMjg4M2Y0M2UzOTM0YTA4MWVlMmIwMDhjZSIsInVzZXJfaWQiOjF9.6-vtcUxPcEH70zaAxXYdiRIt_i-6db17cuHD8lgDyS8
 
 
 POST  http://127.0.0.1:8000/rest/v1/token/
@@ -49,12 +65,13 @@ Content-Type: application/json
 
 
 
+POST http://127.0.0.1:8000/rest/v1/categoria/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4ODYyMzYzLCJqdGkiOiI5MmUzMmJkMjg4M2Y0M2UzOTM0YTA4MWVlMmIwMDhjZSIsInVzZXJfaWQiOjF9.6-vtcUxPcEH70zaAxXYdiRIt_i-6db17cuHD8lgDyS8
 
-
-
-
-
-
+{
+    "descripcion": "Categoria de prueba"
+}
 
 
 
